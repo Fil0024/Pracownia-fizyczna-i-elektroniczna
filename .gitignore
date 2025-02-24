@@ -1,0 +1,29 @@
+# Ignorowanie plików tymczasowych LaTeX
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.log
+*.out
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+*.toc
+*.vrb
+*.lof
+*.lot
+*.lol
+*.spl
+*.dvi
+
+# Ignorowanie plików tymczasowych edytora
+*~
+*.backup
+*.bak
+*.tmp
+
+# Ignorowanie plików cache
+.cache
+latexmkrc
