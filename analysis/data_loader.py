@@ -6,6 +6,6 @@ def load_data(path, sep=',', decimal=','):
     return df
 
 if __name__ == "__main__":
-    path = 'cw2/dane/pkt4.csv'
+    path = 'dane/pkt4.csv'
     df = load_data(path)
     print(f"pkt4: {df.shape} wczytane.")

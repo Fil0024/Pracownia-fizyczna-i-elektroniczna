@@ -60,22 +60,12 @@ def calc_parameters(df, R, C):
     (L_P, Rp_P),  (u_LP, u_RpP)  = fit_phi(omega, phi_exp, R, C)
 
     return {
-        L_T, Rp_T, u_LT, u_RpT,
-        L_P, Rp_P, u_LP, u_RpP
+        "L_T": L_T,
+        "Rp_T": Rp_T,
+        "u_LT": u_LT,
+        "u_RpT": u_RpT,
+        "L_P": L_P,
+        "Rp_P": Rp_P,
+        "u_LP": u_LP,
+        "u_RpP": u_RpP
     }
-
-
-if __name__ == "__main__":
-    path_in1 = 'cw2/dane/pkt4.csv'
-    path_in2 = 'cw2/dane/pkt5.csv'
-    path_out = 'cw2/paper/figures'
-
-    R1 = 510        # Ohm
-    R2 = 500        # Ohm
-    C = 1e-9      # F
-
-    data1 = load_data(path_in1)
-    data2 = load_data(path_in2)
-
-    calc_parameters(data1, R1, C)
-    calc_parameters(data2, R2, C)
