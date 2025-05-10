@@ -1,12 +1,15 @@
 import calculations as calc
-from data_loader import load_data
+from data_loader import load_data, base_dir
 from visualisation import visualise_data
 import numpy as np
 
 path_in1 = 'data/pkt4.csv'
 path_in2 = 'data/pkt5.csv'
 path_figures = 'raport/figures'
-path_results = 'analiza/results.txt'
+path_results = 'analysis/results.txt'
+
+path_results = base_dir()/path_results
+path_figures = base_dir()/path_figures
 
 R1 = 506        # Ohm
 R2 = 50.2        # Ohm
@@ -20,6 +23,7 @@ def show_results(data,  R, C, name='no_name'):
     results = calc.calc_parameters(data, R, C)
     exp_resonance1, exp_bandwidth1, theoretical_resonance1, exp_transmitance_rez, Theoretical_Rp  = calc.calc_resonance_and_bandwidth(R1, results['L_T'], C, results['Rp_T'])
 
+    
     with open(path_results, 'a') as f:
         f.write("Results for "+name+":\n")
         f.write(f"L_T = {results['L_T']:.6f} +- {results['u_LT']:.6f} H\n")
