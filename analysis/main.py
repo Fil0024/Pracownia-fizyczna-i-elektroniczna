@@ -3,8 +3,8 @@ from data_loader import load_data
 from visualisation import visualise_data
 import numpy as np
 
-path_in1 = 'dane/pkt4.csv'
-path_in2 = 'dane/pkt5.csv'
+path_in1 = 'data/pkt4.csv'
+path_in2 = 'data/pkt5.csv'
 path_figures = 'raport/figures'
 path_results = 'analiza/results.txt'
 
